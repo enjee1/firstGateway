@@ -1,5 +1,7 @@
 package com.careerdevs;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -31,7 +33,7 @@ public class GatewayApplication {
 
 	@GetMapping("/apod")
 	public APOD apodInfo(RestTemplate restTemplate) {
-		String URL = "https://api.nasa.gov/planetary/apod?api_key=" + MY_API_KEY;
+		String URL = "https://api.nasa.gov/planetary/apod?api_key=";
 
 		APOD apod = restTemplate.getForObject(URL, APOD.class);
 
