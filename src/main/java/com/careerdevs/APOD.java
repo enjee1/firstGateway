@@ -1,6 +1,7 @@
 package com.careerdevs;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import net.minidev.json.annotate.JsonIgnore;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class APOD {
